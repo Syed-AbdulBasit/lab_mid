@@ -1,67 +1,175 @@
 import 'package:flutter/material.dart';
-
+import 'package:laab_mid/Create_Tasbeeh.dart';
+import 'package:laab_mid/saved_tasbih.dart';
+import 'package:laab_mid/About_us.dart';
+import 'package:laab_mid/Counter.dart';
+import 'package:laab_mid/constants.dart';
 
 
 class home extends StatefulWidget {
   const home({Key? key}) : super(key: key);
 
   @override
-  State<home> createState() => _homeState();
+  State<home> createState() => _home();
 }
 
-class _homeState extends State<home> {
+class _home extends State<home> {
   @override
 
 
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-          appBar: AppBar(),
+        appBar: AppBar(),
+        body: Container(
 
-          drawer: Drawer( child: ListView(
+          child: Column( children:<Widget> [
 
-            padding: EdgeInsets.zero,
-            children: [
-              const DrawerHeader(
-                decoration: BoxDecoration(
-                  color: Colors.teal,
+            SizedBox(height: 50.0,),
+            GestureDetector(
+              onTap: (){
+
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context)=>CreateTsbh(
+
+
+                    )));
+              },
+
+              child: Container(
+                child: Center(
+                  child: Text(
+                    'Create Tasbih',
+                    // style: kLargeButtonStyle,
+                  ),
                 ),
-                child: Text('Tesbeeh App'),
-
+                color: Color(0xFF8d8e98),
+                margin: EdgeInsets.only(top: 10.0),
+                width:  220.0,
+                height: 60.0,
               ),
-              FlatButton(
+            ),
+            SizedBox(height: 30.0,),
+            GestureDetector(
+              onTap: (){
 
-                onPressed:(){
-                  Navigator.push(context,MaterialPageRoute(builder: (context) =>home()));
-                },
-                child: Text("HOME",style: TextStyle(color: Colors.red)),
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context)=>Counter(
+
+
+                    )));
+              },
+
+              child: Container(
+                child: Center(
+                  child: Text(
+                    'Counter',
+                    // style: kLargeButtonStyle,
+                  ),
+                ),
+                color: Colors.teal,
+
+                margin: EdgeInsets.only(top: 10.0),
+                width:  220.0,
+                height: 60.0,
               ),
+            ),
+            SizedBox(height: 30.0,),
+            GestureDetector(
+              onTap: (){
+
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context)=>Saved(
 
 
-              FlatButton(
+                    )));
+              },
 
-                onPressed:(){
+              child: Container(
+                child: Center(
+                  child: Text(
+                    'View Saved',
+                    style: kLargeButtonStyle,
+                  ),
+                ),
+                color: Colors.white,
 
-                },
-                child: Text("QUERIES",style: TextStyle(color: Colors.teal)),
+                margin: EdgeInsets.only(top: 10.0),
+                width:  220.0,
+                height: 60.0,
               ),
+            )
+          ]
 
 
-              FlatButton(
-
-                onPressed:(){
-
-                },
-
-                child:
-
-                Text("About us",style: TextStyle(color: Colors.teal)),
-              ),
-            ],
           ),
-          ),
 
-          backgroundColor: Colors.brown
+
+
+        ),
+        drawer: Drawer( child: ListView(
+
+          padding: EdgeInsets.zero,
+          children: [
+            const DrawerHeader(
+              decoration: BoxDecoration(
+                color: Colors.teal,
+              ),
+              child: Text('Tasbih App'),
+
+            ),
+            ListTile(
+              title: Text('Home'),
+              leading: Icon(Icons.home),
+              onTap: (){
+
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context)=>home(
+
+                    )));
+              },
+            ),
+
+
+
+
+            ListTile(
+              title: Text('Queries'),
+              leading: Icon(Icons.question_mark),
+              onTap: (){
+
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context)=>About(
+
+                    )));
+              },
+            ),
+            ListTile(
+              title: Text('Contact Us'),
+              leading: Icon(Icons.call),
+              onTap: (){
+
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context)=>About(
+
+                    )));
+              },
+            ),
+            ListTile(
+              title: Text('About us'),
+              leading: Icon(Icons.backup),
+              onTap: (){
+
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context)=>About(
+
+                    )));
+              },
+            ),
+          ],
+        ),),
+
+
 
 
       ),
