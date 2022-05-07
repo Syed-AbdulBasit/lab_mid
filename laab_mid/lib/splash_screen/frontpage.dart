@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'dart:async';
 
-import 'package:mid_task/home.dart';
+import 'package:laab_mid/home.dart';
 
 class LoadingScreen extends StatefulWidget {
   @override
