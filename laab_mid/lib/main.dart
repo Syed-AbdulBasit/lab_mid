@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'package:laab_mid/splash_screen/frontpage.dart';
 void main() {
   runApp( MyApp());
 }
