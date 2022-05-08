@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1021976755440",
+    "project_id": "uni-projects-7e992",
+    "storage_bucket": "uni-projects-7e992.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1021976755440:android:a3f576b3aec5221accd635",
+        "android_client_info": {
+          "package_name": "com.example.laab_mid"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1021976755440-6mo8gb1d5hjsnbubnhamcpppn3bopcib.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAPD3eJIyqHjegSbnCgfvJjONqCGWOBRQ4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1021976755440-6mo8gb1d5hjsnbubnhamcpppn3bopcib.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
