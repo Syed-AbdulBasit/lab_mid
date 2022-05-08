@@ -19,13 +19,17 @@ class _home extends State<home> {
 
   Widget build(BuildContext context) {
     return MaterialApp(
+
       home: Scaffold(
-        appBar: AppBar(),
+
+        appBar: AppBar(backgroundColor:   Colors.black,),
+        backgroundColor:   Colors.teal,
         body: Container(
+
 
           child: Column( children:<Widget> [
 
-            SizedBox(height: 50.0,),
+            SizedBox(height: 50.0,width: 100.0,),
             GestureDetector(
               onTap: (){
 
@@ -40,10 +44,10 @@ class _home extends State<home> {
                 child: Center(
                   child: Text(
                     'Create Tasbih',
-                    // style: kLargeButtonStyle,
+                    style: kLargeButtonStyle,
                   ),
                 ),
-                color: Color(0xFF8d8e98),
+                  color:   Colors.teal,
                 margin: EdgeInsets.only(top: 10.0),
                 width:  220.0,
                 height: 60.0,
@@ -64,7 +68,7 @@ class _home extends State<home> {
                 child: Center(
                   child: Text(
                     'Counter',
-                    // style: kLargeButtonStyle,
+                    style: kLargeButtonStyle,
                   ),
                 ),
                 color: Colors.teal,
@@ -92,7 +96,7 @@ class _home extends State<home> {
                     style: kLargeButtonStyle,
                   ),
                 ),
-                color: Colors.white,
+                  color:   Colors.teal,
 
                 margin: EdgeInsets.only(top: 10.0),
                 width:  220.0,
@@ -113,13 +117,14 @@ class _home extends State<home> {
           children: [
             const DrawerHeader(
               decoration: BoxDecoration(
-                color: Colors.teal,
+                color: Colors.brown  ,
               ),
               child: Text('Tasbih App'),
 
             ),
             ListTile(
               title: Text('Home'),
+
               leading: Icon(Icons.home),
               onTap: (){
 
